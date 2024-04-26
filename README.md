@@ -62,6 +62,10 @@ public class MetodoTrapecio_Ejercicio1 {
     }
 }
 ```
+### Salida
+
+![Captura de pantalla (750)](https://github.com/AlanOrgazVillegas/MetodosNumericos_T4/assets/147757830/7068292e-5553-4b3f-9a62-197c30764488)
+
 ## 5 Ejercicios en Java
 
 Enlace de ejercicios: 
