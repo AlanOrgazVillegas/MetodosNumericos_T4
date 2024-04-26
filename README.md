@@ -14,7 +14,7 @@ Problemario de la asignatura de métodos numéricos, tema 4. 5ejericicios del m�
   - Código en java.
   - Ejercicios.
 + Método de Simpson 3/8
-  -Definición.
+  - Definición.
   - Algoritmo.
   - Código en java.
   - Ejercicios.
@@ -71,7 +71,68 @@ public class MetodoTrapecio_Ejercicio1 {
 Enlace de ejercicios: 
 
 ********************************************************************************************************************************************
+# Método del trapecio
+## Definición
 
+El método de Simpson 1/3 es otra técnica de integración numérica utilizada para aproximar el valor de una integral definida. A diferencia del método del trapecio, el método de Simpson 1/3 utiliza polinomios de segundo grado (también conocidos como parábolas) para aproximar la función entre cada par de puntos de partición.
+
+Fórmula: ![Captura de pantalla (751)](https://github.com/AlanOrgazVillegas/MetodosNumericos_T4/assets/147757830/ba15c43b-8278-439c-bb66-a6d065d2847e)
+
+## Algortimo
+
+```
+Función Simpson13(f, a, b, n):
+    si n no es par, devolver "El número de intervalos debe ser par."
+    h = (b - a) / n
+    suma = f(a) + f(b) // Sumamos el valor de f(a) y f(b) al resultado
+    Para i desde 1 hasta n-1:
+        xi = a + i * h // Calculamos los puntos de partición
+        Si i es par:
+            suma = suma + 2 * f(xi) // Sumamos el valor de f(xi) ponderado por 2
+        Sino:
+            suma = suma + 4 * f(xi) // Sumamos el valor de f(xi) ponderado por 4
+    resultado = h * suma / 3 // Multiplicamos por el ancho de los intervalos y dividimos por 3
+    Devolver resultado
+```
+## Código en Java
+
+```
+package metodosimpson1_3_ejercicio1;
+import java.util.function.Function;
+public class MetodoSimpson1_3_Ejercicio1 {
+    public static double reglaSimpson(double a, double b, int n, Function<Double, Double> f) {
+        double h = (b - a) / n; 
+        double suma = f.apply(a) + f.apply(b); 
+        for (int i = 1; i < n; i++) {
+            double x = a + i * h;
+            if (i % 2 == 0) {
+                suma += 2 * f.apply(x);
+            } else {
+                suma += 4 * f.apply(x);
+            }
+        }
+        return (h / 3) * suma;
+    }
+    public static void main(String[] args) {
+        // Definir los límites de integración y el número de subintervalos
+        double a = 0; 
+        double b = 0.8; 
+        int n = 2; 
+        Function<Double, Double> funcion = x -> 0.2 + (25*x) - (200*Math.pow(x, 2)) + (675*Math.pow(x, 3)) - (900*Math.pow(x, 4)) + (400*Math.pow(x, 5));
+        double resultado = reglaSimpson(a, b, n, funcion);
+        System.out.println("El resultado de la integral definida es: " + resultado);
+    }
+}
+```
+### Salida
+
+![Captura de pantalla (752)](https://github.com/AlanOrgazVillegas/MetodosNumericos_T4/assets/147757830/d595b47c-19de-4a45-b39b-877b0280e061)
+
+## 5 Ejercicios en Java
+
+Enlace de ejercicios: 
+
+********************************************************************************************************************************************
 
 
 
