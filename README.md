@@ -27,7 +27,7 @@ El método del trapecio es una técnica de integración numérica utilizada para
 Fórmula: ![Captura de pantalla (749)](https://github.com/AlanOrgazVillegas/MetodosNumericos_T4/assets/147757830/8de4aa6d-99a7-4d5a-a002-073596bfbe70)
 
 ## Algortimo
-'''
+```
 Función Trapecio(f, a, b, n):
     h = (b - a) / n
     suma = 0.5 * (f(a) + f(b)) // Sumamos el valor de f(a) y f(b) al resultado
@@ -36,10 +36,10 @@ Función Trapecio(f, a, b, n):
         suma = suma + f(xi) // Sumamos el valor de f(xi) al resultado
     resultado = h * suma // Multiplicamos por el ancho de los trapecios
     Devolver resultado
-'''
-
+```
 ## Código en Java
 
+```
 package metodotrapecio_ejercicio1;
 import java.util.function.Function;
 public class MetodoTrapecio_Ejercicio1 {
@@ -61,6 +61,13 @@ public class MetodoTrapecio_Ejercicio1 {
         System.out.println("El resultado de la integral definida es: " + resultado);
     }
 }
+```
+## 5 Ejercicios en Java
+
+Enlace de ejercicios: 
+
+********************************************************************************************************************************************
+
 
 
 
