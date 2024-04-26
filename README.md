@@ -129,7 +129,7 @@ public class MetodoSimpson1_3_Ejercicio1 {
 
 ## 5 Ejercicios en Java
 
-Enlace de ejercicios: 
+[Enlace de ejercicios](https://github.com/AlanOrgazVillegas/MetodosNumericos_T4/tree/main/M%C3%A9todo%20de%20Simpson%2013)
 
 ********************************************************************************************************************************************
 
