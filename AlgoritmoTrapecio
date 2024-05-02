@@ -1,0 +1,9 @@
+#Algoritmo
+Función Trapecio(f, a, b, n):
+    h = (b - a) / n
+    suma = 0.5 * (f(a) + f(b)) // Sumamos el valor de f(a) y f(b) al resultado
+    Para i desde 1 hasta n-1:
+        xi = a + i * h // Calculamos los puntos de partición
+        suma = suma + f(xi) // Sumamos el valor de f(xi) al resultado
+    resultado = h * suma // Multiplicamos por el ancho de los trapecios
+    Devolver resultado
